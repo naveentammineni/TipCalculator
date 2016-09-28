@@ -7,29 +7,26 @@
 //
 
 import UIKit
+import Foundation
 
 class SettingsViewController: UIViewController {
 
+    let defaults = UserDefaults.standard
+    @IBOutlet weak var tipSelector: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tipSelector.selectedSegmentIndex = defaults.integer(forKey: "Tip")
+        defaults.set(false, forKey: "changed")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func setDefaultTip(_ sender: AnyObject) {
+        //Setting the tip with updated index and also updating the changed flag.
+        defaults.set(tipSelector.selectedSegmentIndex, forKey: "Tip")
+        defaults.set(true, forKey: "changed")
     }
-    */
-
 }

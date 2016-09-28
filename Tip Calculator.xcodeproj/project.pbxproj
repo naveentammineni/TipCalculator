@@ -14,6 +14,7 @@
 		B60079731D99CDF8003C5FEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60079711D99CDF8003C5FEA /* LaunchScreen.storyboard */; };
 		B600797E1D99CDF8003C5FEA /* Tip_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600797D1D99CDF8003C5FEA /* Tip_CalculatorTests.swift */; };
 		B60079891D99CDF8003C5FEA /* Tip_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60079881D99CDF8003C5FEA /* Tip_CalculatorUITests.swift */; };
+		B60079981D9A2BF1003C5FEA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60079971D9A2BF1003C5FEA /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B60079841D99CDF8003C5FEA /* Tip CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tip CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60079881D99CDF8003C5FEA /* Tip_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip_CalculatorUITests.swift; sourceTree = "<group>"; };
 		B600798A1D99CDF8003C5FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B60079971D9A2BF1003C5FEA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		B60079671D99CDF8003C5FEA /* Tip Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				B60079681D99CDF8003C5FEA /* AppDelegate.swift */,
+				B60079961D99CE35003C5FEA /* Supporting Files */,
 				B600796A1D99CDF8003C5FEA /* ViewController.swift */,
 				B600796C1D99CDF8003C5FEA /* Main.storyboard */,
-				B600796F1D99CDF8003C5FEA /* Assets.xcassets */,
-				B60079711D99CDF8003C5FEA /* LaunchScreen.storyboard */,
-				B60079741D99CDF8003C5FEA /* Info.plist */,
+				B60079971D9A2BF1003C5FEA /* SettingsViewController.swift */,
 			);
 			path = "Tip Calculator";
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				B600798A1D99CDF8003C5FEA /* Info.plist */,
 			);
 			path = "Tip CalculatorUITests";
+			sourceTree = "<group>";
+		};
+		B60079961D99CE35003C5FEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B60079681D99CDF8003C5FEA /* AppDelegate.swift */,
+				B600796F1D99CDF8003C5FEA /* Assets.xcassets */,
+				B60079711D99CDF8003C5FEA /* LaunchScreen.storyboard */,
+				B60079741D99CDF8003C5FEA /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			files = (
 				B600796B1D99CDF8003C5FEA /* ViewController.swift in Sources */,
 				B60079691D99CDF8003C5FEA /* AppDelegate.swift in Sources */,
+				B60079981D9A2BF1003C5FEA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
