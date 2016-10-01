@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        billField.becomeFirstResponder()
         let hasChanged = defaults.bool(forKey: "changed")
         let firstLoad = !defaults.bool(forKey: "firstLoad")
         //Loading the app for first time will select the 18% as default tip
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
         }
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -45,12 +47,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateTip(_ sender: AnyObject) {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
         let tipPercentages = [0.18, 0.2, 0.22]
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLable.text = String(format: "$%.2f", total)
+        
+        tipLabel.text = formatter.string(from: NSNumber(value: tip))
+        totalLable.text = formatter.string(from: NSNumber(value: total))
     }
 }
 
